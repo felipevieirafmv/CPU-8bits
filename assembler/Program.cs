@@ -104,15 +104,12 @@ foreach (var line in finalLines)
         case "str":
             sb.Append('7');
             sb.Append(getData((byte)
-                (1 + int.Parse(data[1].Replace("$", ""))))
+                (4 + int.Parse(data[1].Replace("$", ""))))
             );
             break;
         
         case "ldr":
-            sb.Append('7');
-            sb.Append(getData((byte)
-                (2 + int.Parse(data[1].Replace("$", ""))))
-            );
+            sb.Append("78");
             break;
         
         case "ret":
